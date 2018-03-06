@@ -1,4 +1,5 @@
 var React = require('react');
+import PropTypes from 'prop-types';
 
 class Friends extends React.Component {
     render() {
@@ -32,5 +33,12 @@ class Friends extends React.Component {
         )
     }
 }
+
+Friends.propTypes = {
+    list: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        friend: PropTypes.bool
+    }))
+};
 
 export default Friends;

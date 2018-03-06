@@ -1,4 +1,5 @@
 var React = require('react');
+import PropTypes from 'prop-types';
 
 class Avatar extends React.Component {
     render() {
@@ -35,5 +36,13 @@ class Badge extends React.Component {
         )
     }
 }
+
+Badge.propTypes = {
+    user: PropTypes.shape({
+        img: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        username: PropTypes.string.isRequired
+    })
+};
 
 export default Badge;
