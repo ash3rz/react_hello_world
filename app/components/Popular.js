@@ -25,7 +25,7 @@ class Popular extends React.Component {
         console.log('Render function!', this);
         return (
             <ul className='languages'>
-                {languages.map(function (lang) {
+                {languages.map((lang) => {
                     console.log("I'm in the map function, new context!", this);
                     return (
                         <li
@@ -35,12 +35,12 @@ class Popular extends React.Component {
                             {lang}
                         </li>
                     )
-                }, this)}
+                })}
             </ul>
         )
     }
-    // NOTE: We're passing in 'this' as a secondary parameter to the map function.
-    // This moves the outer context into the inner function
+    // The arrow function ALWAYS makes it so that the outer context
+    // is supplied to the inner context
 }
 
 module.exports = Popular;
