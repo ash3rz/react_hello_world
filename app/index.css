@@ -6,3 +6,24 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* By default, every list item has a padding of 20 so we're changing that to 0
+ for the entire application */
+ul {
+    padding: 0;
+}
+
+/* By default in our entire application, for list items, don't use bullet points */
+li {
+    list-style-type: none;
+}
+
+.languages {
+    display: flex; /* display as a row horizontally*/
+    justify-content: center; /* center all items horizontally */
+}
+
+.languages li {
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
