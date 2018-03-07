@@ -1,19 +1,13 @@
 import Badge from "./githubBadge"
 import Friends from "./friends"
+require('./index.css');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-var Hello = React.createClass({
-    render: function () {
-        return (
-            <div>Hello World!</div>
-        )
-    }
-});
+var App = require('./components/App');
 
 ReactDOM.render(
-    <Hello />,
+    <App />,
     document.getElementById('app')
 );
 
