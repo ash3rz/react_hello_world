@@ -1,5 +1,5 @@
 var React = require('react');
-import PropTypes from 'prop-types';
+var PropTypes = require('prop-types');
 
 class Avatar extends React.Component {
     render() {
@@ -45,4 +45,4 @@ Badge.propTypes = {
     })
 };
 
-export default Badge;
+module.exports = Badge;

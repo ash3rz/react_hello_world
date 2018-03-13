@@ -1,5 +1,5 @@
 var React = require('react');
-import PropTypes from 'prop-types';
+var PropTypes = require('prop-types');
 
 class Friends extends React.Component {
     render() {
@@ -41,4 +41,4 @@ Friends.propTypes = {
     }))
 };
 
-export default Friends;
+module.exports = Friends;
