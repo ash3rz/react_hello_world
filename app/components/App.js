@@ -1,13 +1,24 @@
 var React = require('react');
 var Popular = require('./Popular');
+var ReactRouter = require('react-router-dom');
+var Router = ReactRouter.BrowserRouter;
+var Route = ReactRouter.Route;
+var Nav = require ('./Nav');
+var Home = require('./Home');
+var Battle = require('./Battle');
 
 // the div uses className because class is already a keyword
 class App extends React.Component {
     render () {
         return (
-            <div className='container'>
-                <Popular/>
-            </div>
+            <Router>
+                <div className='container'>
+                    <Nav/>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/battle' component={Battle} />
+                    <Route path='/popular' component={Popular} />
+                </div>
+            </Router>
         )
     }
 }
