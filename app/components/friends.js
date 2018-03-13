@@ -16,7 +16,7 @@ class Friends extends React.Component {
                 <h3>Friends</h3>
                 <ul>
                     {myFriends.map(function(user) {
-                        return <li> {user.name} </li>
+                        return <li key={user.name}> {user.name} </li>
                     })
                 }
                 </ul>
@@ -26,7 +26,7 @@ class Friends extends React.Component {
                 <h3>Non-Friends</h3>
                 <ul>
                     {myEnemies.map(function(user){
-                        return <li> {user.name} </li>
+                        return <li key={user.name}> {user.name} </li>
                     })}
                 </ul>
             </div>
